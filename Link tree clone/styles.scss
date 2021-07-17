@@ -1,0 +1,99 @@
+$fonts: Verdana, Geneva, Tahoma, sans-serif;
+$font-color: hsl(0, 0%, 96%);
+$bg-color: hsl(261, 100%, 12%);
+$shadow-color: hsl(57, 100%, 90%);
+$link-color: hsl(51, 100%, 93%);
+$hover-color: hsl(276, 100%, 83%);
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: $bg-color;
+   color: $font-color;
+   font-family: $fonts;
+   min-width: 100vh;
+   text-align: center;
+
+   h1 {
+      margin: 10px 0;
+   }
+
+   header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      text-align: center;
+
+      background-color: hsla(0, 0%, 0%, 0.5);
+
+      img.picture {
+         border: 2px solid;
+         border-color: $hover-color;
+         border-radius: 50%;
+         box-shadow: 0px 0px 50px $hover-color;
+         height: auto;
+         margin: 25px;
+         width: 200px;
+      }
+
+      p {
+         margin: 10px 0;
+      }
+   }
+
+   main {
+      margin: 2%;
+      div.links {
+         ul {
+            max-width: 800px;
+            list-style: none;
+            margin: 0 auto;
+
+            li {
+               a {
+                  font-size: 1.5rem;
+                  border: 2px solid $link-color;
+                  //height: 5rem;
+                  margin: 1.5rem 0;
+                  padding: 1.2rem;
+
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: space-between;
+                  color: $font-color;
+                  font-weight: bold;
+                  text-decoration: none;
+                  box-shadow: $link-color 0px 0px 5px inset, $link-color 0px 0px 8px;
+
+                  transition: 0.5s;
+
+                  i {
+                     font-size: 2rem;
+                  }
+
+                  &:hover {
+                     border: $hover-color solid 2px;
+                     box-shadow: $hover-color 0px 0px 5px inset, $hover-color 0px 0px 8px;
+                     color: $hover-color;
+                     transform: scale(1.15);
+                  }
+               }
+            }
+         }
+      }
+   }
+   footer {
+      background-color: hsla(0, 0%, 0%, 0.5);
+      display: block;
+      min-height: 100px;
+      width: 100%;
+   }
+}
